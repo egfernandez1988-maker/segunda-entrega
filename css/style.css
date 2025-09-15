@@ -4,13 +4,15 @@
      box-sizing: border-box; 
     }
 
+
+
 /* ===== Paleta y tipografías ===== */
 :root{
-  --bg:#ffffff;
-  --text:#1a1a1a;
+--bg:#111416;
+--text:#f2f2f2;
   --muted:#6b6b6b;
-  --accent:#111111;      /* negro elegante */
-  --light:#f5f5f5;       /* gris claro */
+  --accent:#111111;      
+  --light:#665d5d;       
   --radius:14px;
   --shadow:0 8px 24px rgba(0,0,0,.08);
   --maxw:1100px;
@@ -39,8 +41,9 @@ h1, h2, h3{
 header{ text-align: center; }
 
 .logo{
-  max-height: 56px;      /* controla tamaño sin romper proporción */
+  max-height: 50%;     
   width: auto;
+  align-items: center;
 }
 
 .navbar .nav-link{
@@ -90,7 +93,7 @@ img, video{ max-width: 100%; height: auto; display: block; }
   background: #fff;
 }
 
-/* Galería de profesionales (si mantenés las 4 fotos) */
+
 .profesional img{
   width: 160px;
   height: 160px;
