@@ -18,6 +18,10 @@
   --maxw:1100px;
 }
 
+.bg-light{ background:#1a1f24 !important; }
+.box{ background:#14181c; border-color:#222; }
+
+
 html, body { scroll-behavior: smooth; }
 body{
   background: var(--bg);
@@ -27,14 +31,14 @@ body{
   overflow-x: hidden;
 }
 
-/* Títulos con look clásico */
+/* Títulos */
 h1, h2, h3{
   font-family: "Merriweather", Georgia, "Times New Roman", serif;
   line-height: 1.25;
   color: var(--text);
 }
 
-/* Contenedor más angosto para mejor lectura */
+/* Contenedor */
 .container{ max-width: var(--maxw); }
 
 /* ===== Header / Navbar ===== */
@@ -63,7 +67,8 @@ header{ text-align: center; }
 }
 
 /* ===== Secciones ===== */
-section{ scroll-margin-top: 84px; } /* para anclas con navbar */
+section{ scroll-margin-top: 84px; } 
+
 .section-title{
   border-left: 4px solid var(--accent);
   padding-left: .6rem;
@@ -84,7 +89,7 @@ img, video{ max-width: 100%; height: auto; display: block; }
   box-shadow: var(--shadow);
 }
 
-/* Tarjetas/boxes (Experiencia y similares) */
+/* Tarjetas/boxes */
 .box{
   padding: 1rem;
   border: 1px solid #eaeaea;
@@ -125,7 +130,7 @@ p{ color: var(--text); font-size: 1rem; margin: .6rem 0; }
 /* ===== Footer ===== */
 footer p, footer .text-muted{ color: var(--muted) !important; text-align: center; }
 
-/* ===== Utilidades responsivas ===== */
+
 @media (max-width: 576px){
   .logo{ max-height: 44px; }
   h1{ font-size: 1.8rem; }
