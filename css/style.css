@@ -132,6 +132,6 @@ footer p, footer .text-muted{ color: var(--muted) !important; text-align: center
 
 
 @media (max-width: 576px){
-  .logo{ max-height: 44px; }
+  .logo{ max-height: 50%; }
   h1{ font-size: 1.8rem; }
 }
