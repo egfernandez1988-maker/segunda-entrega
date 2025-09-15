@@ -1,129 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EGF Estudio — Barbería Clásica</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <title>EGF Estudio</title>
+  <!-- Tipografías opcionales -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <img src="img/new.logo.png" alt="Logo EGF Barberia clasica" class="logo">
-        </header>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="" href="#Experiencia">Experiencia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#Servicios">Serivicios</a>
-        </li>
-                <li class="nav-item">
-          <a class="nav-link" href="#Instalaciones">Instalaciones</a>
-        </li>
-                <li class="nav-item">
-          <a class="nav-link" href="#Profesionales">Profesionales</a>
-        </li>
-                <li class="nav-item">
-          <a class="nav-link" href="#Direccion">Direccion</a>
-        </li>
-</nav>
-    <main>
-        <h1>EGF estudio</h1>
-        
-        <section id="Experiencia">
-            <h2>Experiencia</h2>
-            <!-- resumen de los servicios y productos -->
-             <div>
-              ✄ Profesionales de exelencia que se capacitan consantemente
-             </div>
-             <div>✄ Cortes de pelo en tendecia para hombres
-             </div>
-             <div>
-              ✄ Perfilado y areglo de barba 
-             </div>
-             <div>
-              ✄ Productos que mejoran la calidad de tu pelo y ayudan a peinarlo cada dia
-             </div>
-             <div>
-              ✄ Atencion personalizada con asesoria durante el trabajo realizado
-             </div>
-        </section>
+  <header class="border-bottom">
+    <div class="container d-flex align-items-center gap-2 py-2">
+      <img src="img/new.logo.png" alt="Logo EGF Estudio Barbería Clásica" class="logo">
+      <strong>EGF Estudio</strong>
+    </div>
 
-        <section id="Servicios">
-            <h2>Servicios</h2>
-            <!-- Explicacion de cada servicio que brindara el negocio -->
-            <p>
-              <label>CORTE DE CABELLO</label>
-            </p>
-              Contamos con con una basta experiencia en cortes de cabello 
-              tanto modernos como clasicos, con maquina, tijeras o incluso navajas.
-              incluimos lavado de cabello y aplicacion de productos.
-            </p>
-            <p>
-              <label>PERFILADO O AFEITADO DE BARBA</label>
-            </p>
-            <P>
-              Perfilado o afeitado de barba de todo tipo y tamaño, asesorándote
-              con el objetivo de que elijas el servicio que mas te acomode y logres en el dia a dia el mejor desarrollo de tu barba, a traves de tratamientos con productos de alta calidad.
-            </P>
-            <img src="img/profesional-1.webp" alt="img servicios" class="img-servicios">
-        </section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#top">EGF Estudio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <section id="Instalaciones">
-            <h2>Instalaciones</h2>
-            <!-- Video que enseñe todas las instalaciones del futuro estudio -->
-            <video src="video.mp4" controls></video>
-        </section>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#Experiencia">Experiencia</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Instalaciones">Instalaciones</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Profesionales">Profesionales</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Direccion">Dirección</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-        <section id="Profesionales">
-            <h2>Profesionales</h2>
-            <main>
-            <div class="profesional 1">
-                <!-- nombre de cada profesional con su respectiva foto -->
-                <h3>Profesional 1</h3>
-                <img src="img/profesional-1.webp" alt="Foto del profesional_1" class="img1">
-            </div>
-            <div class="profesional 2">
-                <h3>Profesional 2</h3>
-                <img src="img/profesional-1.webp" alt="Foto del profesional_2" class="img1">
-            </div>
-            <div class="profesional 3">
-                <h3>Profesional 3</h3>
-                <img src="img/profesional-1.webp" alt="Foto del profesional_3" class="img1">
-            </div>
-            <div class="profesional 4">
-                <h3>Profesional 4</h3>
-                <img src="img/profesional-1.webp" alt="Foto del profesional_4" class="img1">
-            </div>
-            </main>
-        </section>
+  <main id="top">
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h1 class="display-6 fw-bold mb-3">EGF Estudio</h1>
+        <p class="lead mb-4">Barbería Clásica — cortes en tendencia, perfilado de barba y atención personalizada.</p>
+        <a class="btn btn-dark me-2" href="#Servicios">Ver servicios</a>
+        <a class="btn btn-outline-dark" href="#Direccion">Cómo llegar</a>
+      </div>
+    </section>
 
-        <section id="Direccion">
-            <h2>Dirección</h2>
-            <!-- informacion , como llegar  -->
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem ipsa odio porro sit. Maxime praesentium atque libero
-                laudantium vitae dolorem? Assumenda sequi repellat vero quas libero
-                perferendis sint delectus saepe?
-            </p>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        </section>
+    <section id="Experiencia" class="py-5">
+      <div class="container">
+        <h2 class="h3 section-title mb-4">Experiencia</h2>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><div class="p-3 border rounded-3 h-100">✄ Profesionales de excelencia que se capacitan constantemente.</div>
+        </div>
+          <div class="col-md-6 col-lg-4"><div class="p-3 border rounded-3 h-100">✄ Cortes de pelo en tendencia y estilos clásicos.</div>
+        </div>
+          <div class="col-md-6 col-lg-4"><div class="p-3 border rounded-3 h-100">✄ Perfilado y arreglo de barba.</div></div>
+          <div class="col-md-6 col-lg-4"><div class="p-3 border rounded-3 h-100">✄ Productos de calidad para cuidado y peinado diario.</div></div>
+          <div class="col-md-6 col-lg-4"><div class="p-3 border rounded-3 h-100">✄ Atención personalizada y asesoría durante el servicio.</div></div>
+        </div>
+      </div>
+    </section>
 
-    </main>
+    <section id="Servicios" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="h3 section-title mb-4">Servicios</h2>
 
-    <footer>
-        <p>Todos los derechos reservados</p>
-    </footer>
+        <article class="mb-4">
+          <h3 class="h5 mb-2">Corte de Cabello</h3>
+          <p>Contamos con amplia experiencia en cortes modernos y clásicos, con máquina, tijera o navaja. Incluye lavado y aplicación de productos.</p>
+        </article>
+
+        <article class="mb-4">
+          <h3 class="h5 mb-2">Perfilado o Afeitado de Barba</h3>
+          <p>Perfilado o afeitado de barba de todo tipo y tamaño. Te asesoramos para que elijas el servicio que mejor se adapte a tu día a día, con productos de alta calidad.</p>
+        </article>
+
+        <div class="text-center">
+          <img src="img/profesional-1.webp" alt="Demostración de servicios de barbería" class="img-fluid rounded img-servicios">
+        </div>
+      </div>
+    </section>
+
+    <section id="Instalaciones" class="py-5">
+      <div class="container">
+        <h2 class="h3 section-title mb-4">Instalaciones</h2>
+        <div class="ratio ratio-16x9 rounded overflow-hidden shadow-sm">
+          <video src="video.mp4" controls aria-label="Recorrido por las instalaciones de EGF Estudio"></video>
+        </div>
+      </div>
+    </section>
+
+    <section id="Profesionales" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="h3 section-title mb-4">Profesionales</h2>
+        <div class="row g-4">
+          <div class="col-6 col-md-3 text-center">
+            <img src="img/profesional-1.webp" alt="Profesional 1 en EGF Estudio" class="img-fluid rounded mb-2">
+            <h3 class="h6 mb-0">Profesional 1</h3>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <img src="img/profesional-1.webp" alt="Profesional 2 en EGF Estudio" class="img-fluid rounded mb-2">
+            <h3 class="h6 mb-0">Profesional 2</h3>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <img src="img/profesional-1.webp" alt="Profesional 3 en EGF Estudio" class="img-fluid rounded mb-2">
+            <h3 class="h6 mb-0">Profesional 3</h3>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <img src="img/profesional-1.webp" alt="Profesional 4 en EGF Estudio" class="img-fluid rounded mb-2">
+            <h3 class="h6 mb-0">Profesional 4</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Direccion" class="py-5">
+      <div class="container">
+        <h2 class="h3 section-title mb-3">Dirección</h2>
+        <p>Av. Ejemplo 1234, Las Condes, Santiago — Lunes a Viernes 11–20 hs, Sábados 9–14 hs.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 border-top">
+    <div class="container text-center small text-muted">
+      © <span id="year"></span> EGF Estudio — Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
