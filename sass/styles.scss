@@ -1,0 +1,226 @@
+@import "utilidades/variables" ;
+@import "utilidades/mixin" ;
+
+/* ===== Variables ===== */
+$bg: #111416;
+$text: #f2f2f2;
+$muted: #1b1313;
+$accent: #111111;
+$light: #665d5d;
+$radius: 14px;
+$shadow: 0 8px 24px rgba(0,0,0,.08);
+$maxw: 1100px;
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Base ===== */
+html, body { scroll-behavior: smooth; }
+
+body {
+  background: $bg;
+  color: $text;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+  color: $text;
+}
+
+/* ===== Layout ===== */
+.container { max-width: $maxw; }
+
+header {
+  text-align: center;
+
+  .logo {
+    max-height: 50%;
+    width:auto;
+    display: inline-block;
+  }
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  .nav-link {
+    font-weight: 500;
+    letter-spacing: .2px;
+
+    &.active {
+      color: $accent !important;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: .5rem; right: .5rem; bottom: .35rem;
+        height: 2px;
+        background: $accent;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+/* ===== Secciones ===== */
+section { scroll-margin-top: 84px; }
+
+.section-title {
+  border-left: 4px solid $accent;
+  padding-left: .6rem;
+  margin-bottom: 1rem;
+}
+
+.bg-light { background: $light !important; }
+
+/* ===== Imágenes ===== */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-servicios {
+  max-width: 720px;
+  margin: 1rem auto;
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+/* ===== Experiencia (box reutilizable) ===== */
+.box {
+  padding: 1rem;
+  border: 1px solid #eaeaea;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  background: #fff;
+}
+
+/* Profesionales */
+.profesional {
+  img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto 8px;
+    box-shadow: $shadow;
+  }
+}
+
+/* ===== Textos ===== */
+p { color: $text; font-size: 1rem; margin: .6rem 0; }
+.lead { color: $muted; }
+
+/* ===== Botones ===== */
+.btn-dark {
+  background: $accent;
+  border-color: $accent;
+
+  &:hover { filter: brightness(1.05); }
+}
+
+.btn-outline-dark {
+  color: $accent;
+  border-color: $accent;
+
+  &:hover {
+    background: $accent;
+    color: #fff;
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  p, .text-muted {
+    color: $muted !important;
+    text-align: center;
+  }
+}
+
+// Flip cards Profesionales
+.profesionales-grid { perspective: 1000px; }
+
+.pro-card {
+  outline: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,.10);
+  background: #fff;
+
+  // activa también con teclado
+  &:hover .pro-card__inner,
+  &:focus .pro-card__inner,
+  &:focus-within .pro-card__inner { transform: rotateY(180deg); }
+
+  // reduce motion para usuarios que lo pidan
+  @media (prefers-reduced-motion: reduce) {
+    &:hover .pro-card__inner,
+    &:focus .pro-card__inner,
+    &:focus-within .pro-card__inner { transform: none; }
+  }
+}
+
+.pro-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .7s cubic-bezier(.2,.8,.2,1);
+  min-height: 240px; // altura mínima del card
+}
+
+.pro-card__face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; // safari
+  display: grid;
+  place-items: center;
+  padding: .75rem;
+}
+
+.pro-card__front {
+  background: #fff;
+
+  img {
+    width: 160px; height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  }
+
+  .pro-card__name {
+    margin: .5rem 0 0;
+    font-size: .95rem;
+    font-weight: 700;
+  }
+}
+
+.pro-card__back {
+  background: #111; color: #fff;
+  transform: rotateY(180deg);
+  text-align: center;
+
+  .pro-card__text {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: .95rem;
+    line-height: 1.35;
+  }
+}
+
+
+/* ===== Media queries ===== */
+@media (max-width: 576px) {
+  .logo { max-height: 44px; }
+  h1 { font-size: 1.8rem; }
+}
