@@ -32,7 +32,7 @@ body {
 h1, h2, h3 {
   font-family: "Merriweather", Georgia, "Times New Roman", serif;
   line-height: 1.25;
-  color: $text;
+  color:#665d5d;
 }
 
 /* ===== Layout ===== */
@@ -95,7 +95,7 @@ img, video {
   box-shadow: $shadow;
 }
 
-/* ===== Experiencia (box reutilizable) ===== */
+
 .box {
   padding: 1rem;
   border: 1px solid #eaeaea;
@@ -190,20 +190,9 @@ footer {
 
 .pro-card__front {
   background: #fff;
-
-  img {
-    width: 160px; height: 160px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,.08);
-  }
-
-  .pro-card__name {
-    margin: .5rem 0 0;
-    font-size: .95rem;
-    font-weight: 700;
-  }
+  text-align: center;
 }
+
 
 .pro-card__back {
   background: #111; color: #fff;
