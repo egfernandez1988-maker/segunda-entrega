@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+.hero{
+  background: $light;
+  padding: 3rem 0;
+
+  .lead{ color: $muted; }
+}
+
+
+.box{ @include box(#fff); }
+
+/* SERVICIOS: imagen destacada */
+.img-servicios{
+  max-width: 720px;
+  margin: 1rem auto;
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+
+
+
+.profesional{
+  text-align: center;
+
+  img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto 8px;
+    box-shadow: $shadow;
+  }
+
+  h3{ font-size: .95rem; margin: 0; }
+}
+
+/* BOTONES */
+.btn-dark{
+  background: $accent;
+  border-color: $accent;
+
+  &:hover{ filter: brightness(1.05); }
+}
+.btn-outline-dark{
+  color: $accent;
+  border-color: $accent;
+
+  &:hover{
+    background: $accent;
+    color: #fff;
+  }
+}
+

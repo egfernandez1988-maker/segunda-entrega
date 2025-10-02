@@ -1,0 +1,30 @@
+@use "variables" as *;
+@mixin box($bg: #fff) {
+  padding: 1rem;
+  border: 1px solid #eaeaea;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  background: $bg;
+}
+
+@mixin responsive-logo($size: 56px) {
+  max-height: $size;
+  width: auto;
+  display: inline-block;
+}
+
+@mixin underline-active($color: $accent) {
+  position: relative;
+  &::after{
+    content:"";
+    position:absolute;
+    left:.5rem; right:.5rem; bottom:.35rem;
+    height:2px; background: $color;
+    border-radius: 2px;
+  }
+}
+
+@mixin media-sm {
+  @media (max-width: 576px) { @content; }
+}
+

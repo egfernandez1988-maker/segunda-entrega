@@ -1,13 +1,10 @@
-@charset "UTF-8";
-/* ===== Variables ===== */
-/* ===== Reset ===== */
+/* Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== Base ===== */
 html, body {
   scroll-behavior: smooth;
 }
@@ -26,21 +23,51 @@ h1, h2, h3 {
   color: #f2f2f2;
 }
 
-/* ===== Layout ===== */
 .container {
   max-width: 1100px;
 }
 
-header {
-  text-align: center;
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
-header .logo {
-  max-height: 50%;
+
+.section-title {
+  border-left: 4px solid #111111;
+  padding-left: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  scroll-margin-top: 84px;
+}
+
+.bg-light {
+  background: #665d5d !important;
+}
+
+.logo {
+  max-height: 56%;
   width: auto;
   display: inline-block;
 }
 
-/* ===== Navbar ===== */
+@media (max-width: 576px) {
+  .logo {
+    max-height: 56%;
+    width: auto;
+    display: inline-block;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+/* Layout */
+header {
+  text-align: center; /* para el bloque superior con logo si lo usas */
+}
+
 .navbar .nav-link {
   font-weight: 500;
   letter-spacing: 0.2px;
@@ -60,36 +87,26 @@ header .logo {
   border-radius: 2px;
 }
 
-/* ===== Secciones ===== */
-section {
-  scroll-margin-top: 84px;
+footer {
+  background: #fff;
+}
+footer p, footer .text-muted {
+  color: #1b1313 !important;
+  text-align: center;
+}
+footer .copy {
+  font-size: 0.9rem;
+  color: #1b1313;
 }
 
-.section-title {
-  border-left: 4px solid #111111;
-  padding-left: 0.6rem;
-  margin-bottom: 1rem;
+.hero {
+  background: #665d5d;
+  padding: 3rem 0;
+}
+.hero .lead {
+  color: #1b1313;
 }
 
-.bg-light {
-  background: #665d5d !important;
-}
-
-/* ===== Imágenes ===== */
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.img-servicios {
-  max-width: 720px;
-  margin: 1rem auto;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-/* ===== Experiencia (box reutilizable) ===== */
 .box {
   padding: 1rem;
   border: 1px solid #eaeaea;
@@ -98,7 +115,17 @@ img, video {
   background: #fff;
 }
 
-/* Profesionales */
+/* SERVICIOS: imagen destacada */
+.img-servicios {
+  max-width: 720px;
+  margin: 1rem auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.profesional {
+  text-align: center;
+}
 .profesional img {
   width: 160px;
   height: 160px;
@@ -107,19 +134,12 @@ img, video {
   margin: 0 auto 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
-
-/* ===== Textos ===== */
-p {
-  color: #f2f2f2;
-  font-size: 1rem;
-  margin: 0.6rem 0;
+.profesional h3 {
+  font-size: 0.95rem;
+  margin: 0;
 }
 
-.lead {
-  color: #1b1313;
-}
-
-/* ===== Botones ===== */
+/* BOTONES */
 .btn-dark {
   background: #111111;
   border-color: #111111;
@@ -137,12 +157,7 @@ p {
   color: #fff;
 }
 
-/* ===== Footer ===== */
-footer p, footer .text-muted {
-  color: #1b1313 !important;
-  text-align: center;
-}
-
+/* Componentes */
 .profesionales-grid {
   perspective: 1000px;
 }
@@ -184,18 +199,7 @@ footer p, footer .text-muted {
 
 .pro-card__front {
   background: #fff;
-}
-.pro-card__front img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-.pro-card__front .pro-card__name {
-  margin: 0.5rem 0 0;
-  font-size: 0.95rem;
-  font-weight: 700;
+  text-align: center;
 }
 
 .pro-card__back {
@@ -209,16 +213,6 @@ footer p, footer .text-muted {
   margin: 0 auto;
   font-size: 0.95rem;
   line-height: 1.35;
-}
-
-/* ===== Media queries ===== */
-@media (max-width: 576px) {
-  .logo {
-    max-height: 44px;
-  }
-  h1 {
-    font-size: 1.8rem;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

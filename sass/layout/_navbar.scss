@@ -1,0 +1,17 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+header{
+  text-align: center; /* para el bloque superior con logo si lo usas */
+}
+
+.navbar{
+  .nav-link{
+    font-weight: 500;
+    letter-spacing: .2px;
+
+    &.active{
+      color: $accent !important;
+      @include underline-active($accent);
+    }
+  }
+}
